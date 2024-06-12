@@ -1,0 +1,112 @@
+<resources>
+
+    <style name="Base.Theme.SuitmediaTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+        <item name="android:fontFamily">@font/poppins</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+    </style>
+
+    <!-- Text style -->
+    <style name="CustomTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+    </style>
+    <!-- SemiBold 24 -->
+    <style name="TextAppearance.Heading1" parent="">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- SemiBold 18 -->
+    <style name="TextAppearance.Heading2" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- Medium 16 -->
+    <style name="TextAppearance.Body" parent="">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- Medium 14 -->
+    <style name="TextAppearance.Body1" parent="">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- Medium 10 -->
+    <style name="TextAppearance.Body2" parent="">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Button style -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textAppearance">@style/TextAppearance.Body1</item>
+    </style>
+
+    <!-- Alert dialog style -->
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.App.Body.Text</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.PositiveButton</item>
+    </style>
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="backgroundInsetStart">@dimen/dialog_horizontal_margin</item>
+        <item name="backgroundInsetEnd">@dimen/dialog_horizontal_margin</item>
+        <item name="backgroundTint">@color/white</item>
+    </style>
+    <!-- Alert dialog title text style -->
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textAppearance">@style/TextAppearance.Heading2</item>
+    </style>
+    <!-- Alert dialog body text style -->
+    <style name="MaterialAlertDialog.App.Body.Text" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textAppearance">@style/TextAppearance.Body</item>
+    </style>
+    <!-- Alert dialog positive button style -->
+    <style name="Widget.App.PositiveButton" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.PositiveButton</item>
+    </style>
+    <style name="ThemeOverlay.App.PositiveButton" parent="ThemeOverlay.Material3.Button">
+        <item name="colorContainer">?attr/colorPrimary</item>
+        <item name="colorOnContainer">?attr/colorOnPrimary</item>
+    </style>
+
+    <!-- Small component style -->
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">@dimen/s_corner_radius</item>
+    </style>
+    <!-- Medium component style -->
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">@dimen/m_corner_radius</item>
+    </style>
+
+    <!-- Text input style -->
+    <style name="CustomTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="endIconTint">@color/light_gray</item>
+        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>
+    </style>
+    <style name="MyThemeOverlayOutlinedDense">
+        <item name="editTextStyle">@style/MyTextInputEditText_outlinedBox_dense_h</item>
+    </style>
+    <style name="MyTextInputEditText_outlinedBox_dense_h" parent="Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+
+    <style name="Theme.SuitmediaTest" parent="Base.Theme.SuitmediaTest" />
+</resources>

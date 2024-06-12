@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_navigation"
+    app:startDestination="@+id/navigation_user_2">
+
+    <fragment
+        android:id="@+id/navigation_user_2"
+        android:name="com.suitmedia.suitmediatest.ui.user.secondscreen.SecondScreenFragment"
+        android:label="@string/second_screen"
+        tools:layout="@layout/fragment_second_screen">
+        <action
+            android:id="@+id/action_navigation_2_to_navigation_3"
+            app:destination="@id/navigation_user_3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_user_3"
+        android:name="com.suitmedia.suitmediatest.ui.user.thirdscreen.ThirdScreenFragment"
+        android:label="@string/third_screen"
+        tools:layout="@layout/fragment_third_screen">
+        <action
+            android:id="@+id/action_navigation_3_to_navigation_2"
+            app:destination="@id/navigation_user_2" />
+    </fragment>
+
+</navigation>
