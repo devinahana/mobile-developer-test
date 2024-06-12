@@ -3,8 +3,6 @@
     <style name="Base.Theme.SuitmediaTest" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/green</item>
 
-        <item name="android:windowBackground">@color/white</item>
-
         <item name="android:fontFamily">@font/poppins</item>
 
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
@@ -13,6 +11,7 @@
         <item name="materialButtonStyle">@style/Widget.App.Button</item>
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
 
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:windowEnterTransition">@android:transition/fade</item>
         <item name="android:windowExitTransition">@android:transition/fade</item>

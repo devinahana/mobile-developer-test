@@ -47,7 +47,7 @@ class ThirdScreenFragment : Fragment() {
     private fun setupAdapter() {
         binding?.userRecyclerView?.layoutManager = LinearLayoutManager(requireContext())
 
-        var adapter = UserListAdapter(this)
+        val adapter = UserListAdapter(this)
         binding?.userRecyclerView?.adapter = adapter
 
         viewModel.getUsers().observe(viewLifecycleOwner) {
@@ -56,6 +56,11 @@ class ThirdScreenFragment : Fragment() {
 
         viewModel.isLoading.observe(viewLifecycleOwner) {
             binding?.progressBar?.isVisible = it
+        }
+
+        binding?.swipeRefreshLayout?.setOnRefreshListener {
+            viewModel.getUsers()
+            binding?.swipeRefreshLayout?.isRefreshing = false
         }
     }
 

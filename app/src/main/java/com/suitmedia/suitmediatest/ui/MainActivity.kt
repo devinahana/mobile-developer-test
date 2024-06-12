@@ -3,19 +3,15 @@ package com.suitmedia.suitmediatest.ui
 import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.WindowCompat
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -23,7 +19,6 @@ import com.suitmedia.suitmediatest.R
 import com.suitmedia.suitmediatest.databinding.ActivityMainBinding
 import com.suitmedia.suitmediatest.ui.user.UserActivity
 import com.suitmedia.suitmediatest.utils.ViewModelFactory
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -107,7 +102,9 @@ class MainActivity : AppCompatActivity() {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 // Remove error when user starts typing
-               removeTextInputError(editTextLayout)
+                if (editTextLayout.error != null) {
+                    editTextLayout.error = null
+                }
             }
             override fun afterTextChanged(s: Editable) {}
         }
@@ -129,12 +126,6 @@ class MainActivity : AppCompatActivity() {
 
         if (!isPalindrome) {
             dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setBackgroundColor(ContextCompat.getColor(this, R.color.red))
-        }
-    }
-
-    private fun removeTextInputError(editTextLayout: TextInputLayout) {
-        if (editTextLayout.error != null) {
-            editTextLayout.error = null
         }
     }
 

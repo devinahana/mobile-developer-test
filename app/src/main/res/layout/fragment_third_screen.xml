@@ -8,8 +8,8 @@
     android:fillViewport="true"
     tools:context=".ui.user.thirdscreen.ThirdScreenFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/activity_horizontal_margin"
@@ -40,5 +40,5 @@
             android:indeterminateTint="?attr/colorPrimary"
             android:visibility="visible" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </ScrollView>
